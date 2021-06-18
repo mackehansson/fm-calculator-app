@@ -1,0 +1,44 @@
+.switch-field {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: var(--keypad-background);
+    width: 71px;
+    height: 26px;
+    padding: 4px;
+    border-radius: 999px;
+
+    input {
+        position: absolute !important;
+        clip: rect(0, 0, 0, 0);
+        height: 1px;
+        width: 1px;
+        border: 0;
+        overflow: hidden;
+
+        &:checked + label {
+            background-color: var(--key-calculate-background);
+        }
+    }
+
+    label {
+        background-color: var(--keypad-background);
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        text-indent: -9999em;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &:first-of-type {
+            // border-radius: 4px 0 0 4px;
+        }
+
+        &:last-of-type {
+            // border-radius: 0 4px 4px 0;
+        }
+    }
+}
